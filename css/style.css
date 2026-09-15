@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    transition: 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.controls,
+.profile-card {
+    background-color: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#formMessage {
+    min-height: 20px;
+    margin-bottom: 0;
+    color: green;
+    font-weight: bold;
+}
+
+.profile-card {
+    border-left: 6px solid green;
+}
+
+.profile-card.active {
+    border-left-color: green;
+}
+
+.profile-card.inactive {
+    border-left-color: red;
+}
+
+.profile-card h2 {
+    margin-top: 0;
+}
+
+.details-panel {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+body.dark-theme {
+    background-color: #222;
+    color: #eee;
+}
+
+body.dark-theme h1 {
+    color: white;
+}
+
+body.dark-theme .controls,
+body.dark-theme .profile-card {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-theme input,
+body.dark-theme select {
+    background-color: #444;
+    color: white;
+    border-color: #666;
+}
+
+body.dark-theme .details-panel {
+    background-color: #444;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
